@@ -46,12 +46,12 @@
                 data: {
                     "uname": $("#runame").val(),
                     "upw": $("#rupwd").val(),
-                    "rupw": $("#r_upwd").val(),
                     "email":$("#email").val()
                 },
                 method:"post",
                 success:function (result) {//这是回调函数
                     layer.alert("注册"+result);
+                    window.location.href="index.html";
                 },
                 error:function () {
                     layer.msg("请求服务器失败!");
@@ -86,9 +86,11 @@
                 method:"post",
                 success:function (result) {//这是回调函数
                     layer.alert("登录"+result);
+
                 },
                 error:function () {
                     layer.msg("请求服务器失败!");
+                    window.location.href="admin.html"
                 }
             });
         }
