@@ -44,13 +44,14 @@
             $.ajax({
                 url: "user/register.do",
                 data: {
-                    "uname": $("#uname").val(),
-                    "upw": $("#upwd").val(),
-                    "rupw": $("#rupwd").val()
+                    "uname": $("#runame").val(),
+                    "upw": $("#rupwd").val(),
+                    "rupw": $("#r_upwd").val(),
+                    "email":$("#email").val()
                 },
                 method:"post",
                 success:function (result) {//这是回调函数
-                    layer.alert("登录"+result);
+                    layer.alert("注册"+result);
                 },
                 error:function () {
                     layer.msg("请求服务器失败!");
@@ -80,7 +81,7 @@
                 url: "user/login.do",
                 data: {
                     "uname": $("#uname").val(),
-                    "upw": $("#upwd").val()
+                    "upwd": $("#upwd").val()
                 },
                 method:"post",
                 success:function (result) {//这是回调函数
